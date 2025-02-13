@@ -1,57 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=1920"/>
-    <meta name="description"
-          content="Tizen Download API Demo" />
+<!DOCTYPE html> 
+<html> 
 
-    <title>Tizen Download API</title>
+<head> 
+	<title>HTML Calculator</title> 
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+	<!-- For styling -->
+	<style> 
+		table { 
+			border: 1px solid black; 
+			margin-left: auto; 
+			margin-right: auto; 
+		} 
+		
+		input[type="button"] { 
+			width: 100%; 
+			padding: 20px 40px; 
+			background-color: skyblue; 
+			color: white; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+		} 
+		
+		input[type="text"] { 
+			padding: 20px 30px; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+			border: 2px solid black; 
+		} 
+	</style> 
+</head> 
 
-</head>
+<body> 
 
-<body>
+	<!-- Create table -->
+	<table id="calcu"> 
+		<tr> 
+			<td colspan="3"> 
+				<input type="text" id="result"> 
+			</td> 
+			<td><input type="button" value="c"></td> 
+		</tr> 
 
-    <h1>Tizen Download API</h1>
+		<tr> 
+			<td><input type="button" value="1"></td> 
+			<td><input type="button" value="2"></td> 
+			<td><input type="button" value="3"></td> 
+			<td><input type="button" value="/"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="4"></td> 
+			<td><input type="button" value="5"></td> 
+			<td><input type="button" value="6"></td> 
+			<td><input type="button" value="*"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="7"></td> 
+			<td><input type="button" value="8"></td> 
+			<td><input type="button" value="9"></td> 
+			<td><input type="button" value="-"></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="0"></td> 
+			<td><input type="button" value="."></td> 
+			<td><input type="button" value="="></td> 
+			<td><input type="button" value="+"></td> 
+		</tr> 
+	</table> 
+</body> 
 
-    <div class="left">
-        <h2>Available buttons/actions:</h2>
-
-        <div>
-            1 - Downloaded file lists<br>
-            2 - Start download - small file<br>
-            3 - Start download - large file<br>
-            Pause - Pause download<br>
-            Play - Resume download<br>
-            Stop - Cancel download<br>
-            0 - Clear logs
-        </div>
-
-        <div id="progress" class="progress">
-            <div id="bar" class="bar"></div>
-        </div>
-
-        <fieldset>
-            <legend>Downloaded files:</legend>
-            <div id="fileList" class="logs"></div>
-        </fieldset>
-
-        <fieldset>
-            <legend>Logs</legend>
-            <div id="logs" class="logs"></div>
-        </fieldset>
-    </div>
-    <div class="right">
-        <h2>Info</h2>
-
-        <p>This application demonstrates the usage of Tizen download API</p>
-
-        <p>The application downloads files from <code>http://techslides.com</code> and <code>http://download.blender.org</code>. If these domains are not accessible it will not work.<br>
-
-            You can change the source location of files to download by changing the contents of <code>url1</code> and <code>url2</code> variables in <code>main.js</code> file</cide></p>
-    </div>
-
-</body>
-</html>
+</html> 
